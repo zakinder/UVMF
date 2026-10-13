@@ -1,0 +1,23 @@
+uvmf:
+  environments:
+    sa:
+      agents:
+      - initiator_responder: INITIATOR
+        name: sa_in_agent
+        type: sa_in
+      - initiator_responder: RESPONDER
+        name: sa_out_agent
+        type: sa_out
+      analysis_components: []
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      hvl_pkg_parameters: []
+      non_uvmf_components: []
+      parameters: []
+      qvip_memory_agents: []
+      scoreboards: []
+      subenvs: []
+      tlm_connections: []

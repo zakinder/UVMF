@@ -1,0 +1,14 @@
+// Insert in generated sa_out_monitor_bfm custom monitor region.
+// Capture serial result bits on falling edges after en_o asserts.
+// 'result' is a 3-bit UVMF output transaction field.
+bit [2:0] captured_result;
+forever begin
+  @(negedge clk);
+  if (en_o) begin
+    captured_result[2] = result_o;
+    @(negedge clk); captured_result[1] = result_o;
+    @(negedge clk); captured_result[0] = result_o;
+    // Call generated monitor's transaction publication task with
+    // captured_result. The exact generated proxy method is version dependent.
+  end
+end

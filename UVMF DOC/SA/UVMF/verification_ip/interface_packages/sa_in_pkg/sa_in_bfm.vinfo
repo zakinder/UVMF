@@ -1,0 +1,6 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.vinfo
+@use sa_in_pkg_hdl.vinfo
++incdir+@vinfodir
+src/sa_in_if.sv
+src/sa_in_driver_bfm.sv
+src/sa_in_monitor_bfm.sv

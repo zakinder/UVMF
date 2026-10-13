@@ -1,3 +1,0 @@
-$UVMF_VIP_LIBRARY_HOME/interface_packages/adder_out_pkg/src/adder_out_if.sv
-$UVMF_VIP_LIBRARY_HOME/interface_packages/adder_out_pkg/src/adder_out_monitor_bfm.sv
-$UVMF_VIP_LIBRARY_HOME/interface_packages/adder_out_pkg/src/adder_out_driver_bfm.sv

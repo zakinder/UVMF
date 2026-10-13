@@ -1,0 +1,34 @@
+uvmf:
+  interfaces:
+    sa_out:
+      clock: clk
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs: []
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: input
+        name: en_o
+        reset_value: 1'b0
+        width: '1'
+      - dir: input
+        name: result_o
+        reset_value: 1'b0
+        width: '1'
+      reset: rst_n
+      reset_assertion_level: 'False'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: result
+        type: bit [2:0]
+        unpacked_dimension: ''
+      use_dpi_link: 'False'
+      veloce_ready: 'False'

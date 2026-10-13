@@ -1,0 +1,44 @@
+uvmf:
+  interfaces:
+    sa_in:
+      clock: clk
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs: []
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: output
+        name: en_i
+        reset_value: 1'b0
+        width: '1'
+      - dir: output
+        name: ina
+        reset_value: 1'b0
+        width: '1'
+      - dir: output
+        name: inb
+        reset_value: 1'b0
+        width: '1'
+      reset: rst_n
+      reset_assertion_level: 'False'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: ina
+        type: bit [1:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: inb
+        type: bit [1:0]
+        unpacked_dimension: ''
+      use_dpi_link: 'False'
+      veloce_ready: 'False'

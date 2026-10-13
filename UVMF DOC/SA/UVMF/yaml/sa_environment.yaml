@@ -1,0 +1,9 @@
+uvmf:
+  environments:
+    sa:
+      agents:
+        - {name: sa_in_agent, type: sa_in, initiator_responder: INITIATOR}
+        - {name: sa_out_agent, type: sa_out, initiator_responder: RESPONDER}
+      analysis_components: []
+      scoreboards: []
+      subenvs: []

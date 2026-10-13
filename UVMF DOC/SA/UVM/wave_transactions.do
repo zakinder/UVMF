@@ -1,6 +1,3 @@
-add wave -divider "DRIVER TXN"
-add wave -position insertpoint sim:/uvm_root/test/sa_env/sa_agent/sa_drvr/simpleadder_driver_stream
-add wave -divider "MONITOR AFTER TXN"
-add wave -position insertpoint sim:/uvm_root/test/sa_env/sa_agent/sa_mon_after/simpleadder_monitor_after_stream
-add wave -divider "MONITOR BEFORE TXN"
-add wave -position insertpoint sim:/uvm_root/test/sa_env/sa_agent/sa_mon_before/simpleadder_monitor_before_stream
+# UVM transactions (paths depend on simulator/UVM configuration)
+# Use Questa GUI transaction viewer to browse /uvm_root/uvm_test_top/sa_env/sa_agent
+# Driver: sa_drvr; monitors: input_mon and output_mon

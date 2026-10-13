@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/sa_out_pkg/sa_out_pkg_hdl.sv

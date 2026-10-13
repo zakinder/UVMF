@@ -1,0 +1,12 @@
+uvmf:
+  benches:
+    sa:
+      top_env: sa
+      clock_half_period: 5ns
+      clock_phase_offset: 0ns
+      reset_assertion_level: 'False'
+      reset_duration: 50ns
+      active_passive:
+        - {bfm_name: sa_in_agent, value: ACTIVE}
+        - {bfm_name: sa_out_agent, value: PASSIVE}
+      interface_params: []

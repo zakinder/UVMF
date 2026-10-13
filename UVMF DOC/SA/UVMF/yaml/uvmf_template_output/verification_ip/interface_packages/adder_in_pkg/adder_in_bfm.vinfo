@@ -1,6 +1,0 @@
-@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.vinfo
-@use adder_in_pkg_hdl.vinfo
-+incdir+@vinfodir
-src/adder_in_if.sv
-src/adder_in_driver_bfm.sv
-src/adder_in_monitor_bfm.sv

@@ -1,0 +1,17 @@
+uvmf:
+  interfaces:
+    sa_in:
+      clock: clk
+      reset: rst_n
+      reset_assertion_level: 'False'
+      veloce_ready: 'False'
+      ports:
+        - {name: en_i, dir: output, width: '1', reset_value: "1'b0"}
+        - {name: ina, dir: output, width: '1', reset_value: "1'b0"}
+        - {name: inb, dir: output, width: '1', reset_value: "1'b0"}
+      transaction_vars:
+        - {name: ina, type: 'bit [1:0]', isrand: 'True', iscompare: 'True'}
+        - {name: inb, type: 'bit [1:0]', isrand: 'True', iscompare: 'True'}
+      config_vars: []
+      config_constraints: []
+      transaction_constraints: []

@@ -1,0 +1,15 @@
+uvmf:
+  interfaces:
+    sa_out:
+      clock: clk
+      reset: rst_n
+      reset_assertion_level: 'False'
+      veloce_ready: 'False'
+      ports:
+        - {name: en_o, dir: input, width: '1', reset_value: "1'b0"}
+        - {name: result_o, dir: input, width: '1', reset_value: "1'b0"}
+      transaction_vars:
+        - {name: result, type: 'bit [2:0]', isrand: 'False', iscompare: 'True'}
+      config_vars: []
+      config_constraints: []
+      transaction_constraints: []
