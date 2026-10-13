@@ -1,0 +1,43 @@
+uvmf:
+  interfaces:
+    adder_out:
+      clock: sig_clock
+      config_constraints: []
+      config_vars:
+      - comment: ''
+        isrand: 'False'
+        name: checks_enable
+        type: bit
+        value: '1'
+      - comment: ''
+        isrand: 'False'
+        name: coverage_enable
+        type: bit
+        value: '1'
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs: []
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: input
+        name: sig_en_o
+        reset_value: 1'b0
+        width: '1'
+      - dir: input
+        name: sig_out
+        reset_value: 1'b0
+        width: '1'
+      reset: reset
+      reset_assertion_level: 'False'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: out
+        type: bit [2:0]
+        unpacked_dimension: ''
+      use_dpi_link: 'False'
