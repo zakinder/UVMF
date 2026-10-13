@@ -1,0 +1,14 @@
+// Capture both input bits on consecutive rising edges.
+// In UVMF implement using monitor task's generated transaction output.
+// Note race avoidance: driver changes stimulus on negative clock edge.
+forever begin
+  @(posedge sig_clock);
+  if (sig_en_i) begin
+    tr.ina[1] = sig_ina;
+    tr.inb[1] = sig_inb;
+    @(posedge sig_clock);
+    tr.ina[0] = sig_ina;
+    tr.inb[0] = sig_inb;
+    // Publish this NEW completed transaction with generated monitor API.
+  end
+end

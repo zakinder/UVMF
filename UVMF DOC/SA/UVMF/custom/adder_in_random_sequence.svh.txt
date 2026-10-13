@@ -1,0 +1,9 @@
+// Add to UVMF generated sequence's body using its generated transaction type.
+// Replace 'agent_sequencer' with generated sequence's sequencer handle.
+repeat (15) begin
+  adder_in_transaction tx;
+  tx = adder_in_transaction::type_id::create("tx");
+  start_item(tx);
+  if (!tx.randomize()) `uvm_fatal("RAND", "Adder input randomization failed")
+  finish_item(tx);
+end

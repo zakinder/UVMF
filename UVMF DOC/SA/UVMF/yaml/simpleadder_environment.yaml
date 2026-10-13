@@ -1,0 +1,24 @@
+uvmf:
+  environments:
+    simpleadder:
+      agents:
+      - name: adder_in_agent
+        type: adder_in
+        initiator_responder: INITIATOR
+      - name: adder_out_agent
+        type: adder_out
+        initiator_responder: RESPONDER
+      analysis_components:
+      - name: adder_pred
+        type: adder_predictor
+      scoreboards:
+      - name: adder_sb
+        sb_type: uvmf_in_order_scoreboard
+        trans_type: adder_out_transaction
+      tlm_connections:
+      - driver: adder_in_agent.monitored_ap
+        receiver: adder_pred.adder_in_agent_ae
+      - driver: adder_pred.adder_sb_ap
+        receiver: adder_sb.expected_analysis_export
+      - driver: adder_out_agent.monitored_ap
+        receiver: adder_sb.actual_analysis_export

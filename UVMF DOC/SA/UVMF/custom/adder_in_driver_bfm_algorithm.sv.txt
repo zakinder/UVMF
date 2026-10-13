@@ -1,0 +1,15 @@
+// Insert in generated adder_in_driver_bfm.sv's drive task custom area.
+// Adjust argument naming against the actual generated BFM prototype.
+// Serial protocol: assert enable for MSB, then deassert and send LSB.
+@(negedge sig_clock);
+sig_en_i <= 1'b1;
+sig_ina <= req.ina[1];
+sig_inb <= req.inb[1];
+@(negedge sig_clock);
+sig_en_i <= 1'b0;
+sig_ina <= req.ina[0];
+sig_inb <= req.inb[0];
+repeat (4) @(negedge sig_clock);
+sig_en_i <= 1'b0;
+sig_ina <= 1'b0;
+sig_inb <= 1'b0;

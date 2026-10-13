@@ -1,0 +1,27 @@
+uvmf:
+  interfaces:
+    adder_out:
+      clock: sig_clock
+      reset: reset
+      reset_assertion_level: 'False'
+      ports:
+      - name: sig_en_o
+        width: '1'
+        dir: input
+        reset_value: 1'b0
+      - name: sig_out
+        width: '1'
+        dir: input
+        reset_value: 1'b0
+      transaction_vars:
+      - name: out
+        type: bit [2:0]
+        isrand: 'False'
+        iscompare: 'True'
+      config_vars:
+      - name: checks_enable
+        type: bit
+        value: '1'
+      - name: coverage_enable
+        type: bit
+        value: '1'
